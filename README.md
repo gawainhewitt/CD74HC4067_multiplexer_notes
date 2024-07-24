@@ -25,6 +25,8 @@ The way it works is that you select the pin on the MUX using the library or pins
 
 For multiple boards you need to have a different EN pin for each one so you can switch which board you are reading from and a seperate SIG pin as well. The SIG will need to have an extenal resistor for pull or pull down otherwise my experience is that I have had some weird readings. 
 
+I found that I only have to create one MUX object in the library and I select which board using the EN pin. I guess it would be more elegant to have that included in the library? But not sure I can be bothered...
+
 Lastly and a little tangentilly a reminder that not all pins on an ESP32 are multi use. Some are input only and have no built in pullup anyway. 
 
 That's it really
